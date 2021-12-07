@@ -1,0 +1,8 @@
+export const SET_TODO = 'SET_TODO'
+export const ADD_TODO = 'ADD_TODO'
+export const CHANGE_TODO = 'CHANGE_TODO'
+export const REMOVE_A_TODO = 'REMOVE_A_TODO'
+export const REMOVE_ALL_TODO_COMP = 'REMOVE_ALL_TODO_COMP'
+export const TOGGLE_STATUS = 'TOGGLE_STATUS'
+export const TOGGLE_ALL_STATUS = 'TOGGLE_ALL_STATUS'
+export const SET_STATUS_BTN = 'SET_STATUS_BTN'
