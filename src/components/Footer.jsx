@@ -46,7 +46,7 @@ const Footer = () => {
         setStatus(paramsSearch.search || 'all')
 
         dispatch(setStatusBtn(paramsSearch.search || 'all'))
-    }, [location.search])
+    }, [location.search, dispatch])
 
 
     const handleDeleteAllTodo = () => {
