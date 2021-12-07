@@ -93,7 +93,6 @@ const Main = () => {
         localStorage.setItem('completed_list', JSON.stringify(completedList))
     }, [completedList])
 
-    console.log(statusBtn);
 
     return (
         <section className="main">
