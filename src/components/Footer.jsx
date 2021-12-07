@@ -18,8 +18,6 @@ const Footer = () => {
 
 
     const handleAllStatus = () => {
-        dispatch(setStatusBtn('all'))
-
         const params = queryString.stringify({search: 'all'})
         history.push({
             pathname: match.pathname,
@@ -28,8 +26,6 @@ const Footer = () => {
     }
 
     const handleActiveStatus = () => {
-        dispatch(setStatusBtn('active'))
-
         const params = queryString.stringify({search: 'active'})
         history.push({
             pathname: match.pathname,
@@ -38,8 +34,6 @@ const Footer = () => {
     }
 
     const handleCompletedStatus = () => {
-        dispatch(setStatusBtn('completed'))
-
         const params = queryString.stringify({search: 'completed'})
         history.push({
             pathname: match.pathname,
@@ -50,6 +44,8 @@ const Footer = () => {
     useEffect(() => {
         const paramsSearch = queryString.parse(location.search)
         setStatus(paramsSearch.search || 'all')
+
+        dispatch(setStatusBtn(paramsSearch.search || 'all'))
     }, [location.search])
 
 

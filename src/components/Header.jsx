@@ -10,12 +10,14 @@ const Header = () => {
 
     const handleAddTodo = e => {
         e.preventDefault()
-        dispatch(addTodo(todoItem))
-
-        dispatch(setTodo({
-            id: null,
-            valueInput: ''
-        }))
+        if (todoItem.valueInput !== '') {
+            dispatch(addTodo(todoItem))
+    
+            dispatch(setTodo({
+                id: null,
+                valueInput: ''
+            }))
+        }
     }
 
     const handleSetTodo = (value) => {
