@@ -10,7 +10,8 @@ const Header = () => {
 
     const handleAddTodo = e => {
         e.preventDefault()
-        if (todoItem.valueInput !== '') {
+        if (todoItem.valueInput.trim().length !== 0) {
+            todoItem.valueInput = todoItem.valueInput.trim()
             dispatch(addTodo(todoItem))
     
             dispatch(setTodo({
