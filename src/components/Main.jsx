@@ -51,7 +51,7 @@ const Main = () => {
         if (keyCode === 13) { // Press ENTER
             const changeObj = {
                 id: todoId,
-                valueInput: editValue
+                valueInput: editValue.trim()
             }
             dispatch(changeTodo(changeObj))
             setTodoId()
