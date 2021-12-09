@@ -123,6 +123,7 @@ const Main = () => {
                                     checked={completedList.includes(todo.id)}
                                     onDoubleClick={e => e.stopPropagation()}
                                 />
+                                {/* <label><pre>{todo.valueInput}</pre></label> add pre tag to keep white space */}
                                 <label>{todo.valueInput}</label>
                                 <button
                                     className="destroy"
