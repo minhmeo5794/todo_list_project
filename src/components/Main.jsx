@@ -49,9 +49,18 @@ const Main = () => {
 
     const handleKeyDown = (keyCode) => {
         if (keyCode === 13) { // Press ENTER
+
+            // Xoá nhiều khoảng trắng ở giữa chuỗi
+            const setNewEditValue = editValue.split(' ')
+            for (let i = 0; i < setNewEditValue.length; i++) {
+                if (setNewEditValue[i].length === 0) {
+                    setNewEditValue.splice(i--, 1)
+                }
+            }
+
             const changeObj = {
                 id: todoId,
-                valueInput: editValue.trim()
+                valueInput: setNewEditValue.join(' ')
             }
             dispatch(changeTodo(changeObj))
             setTodoId()
